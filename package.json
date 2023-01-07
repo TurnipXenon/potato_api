@@ -1,0 +1,30 @@
+{
+  "name": "potato_api",
+  "version": "1.0.0",
+  "description": "Generated typescript client code for potato",
+  "main": "ts/rpc/potato/service.client.js",
+  "types": "ts/rpc/potato/service.client.d.ts",
+  "directories": {
+    "doc": "docs"
+  },
+  "dependencies": {
+    "@protobuf-ts/plugin": "^2.8.2",
+    "@protobuf-ts/runtime": "^2.8.2",
+    "typescript": "^3.9.10"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc --build",
+    "clean": "tsc --build --clean"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TurnipXenon/turnip_api.git"
+  },
+  "author": "turnipxenon <turnipxenon@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TurnipXenon/turnip_api/issues"
+  },
+  "homepage": "https://github.com/TurnipXenon/turnip_api#readme"
+}

@@ -1,0 +1,4 @@
+site_name: Potato API
+nav:
+  - Home: index.md
+  - Onboarding: onboarding.md

@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package turnipxenon.v1;
+option go_package = "rpc/potato";
+
+//import "google/protobuf/timestamp.proto";
+
+// todo documentation
+// todo refactor
+
+message RevalidatePathRequest {
+  string path = 1;
+}
+
+// endregion request and responses
