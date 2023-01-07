@@ -1,3 +1,4 @@
+import { ServiceType } from "@protobuf-ts/runtime-rpc";
 import type { BinaryWriteOptions } from "@protobuf-ts/runtime";
 import type { IBinaryWriter } from "@protobuf-ts/runtime";
 import type { BinaryReadOptions } from "@protobuf-ts/runtime";
@@ -54,4 +55,8 @@ declare class RevalidatePathResponse$Type extends MessageType<RevalidatePathResp
  * @generated MessageType for protobuf message turnipxenon.v1.RevalidatePathResponse
  */
 export declare const RevalidatePathResponse: RevalidatePathResponse$Type;
+/**
+ * @generated ServiceType for protobuf service turnipxenon.v1.Potato
+ */
+export declare const Potato: ServiceType;
 export {};

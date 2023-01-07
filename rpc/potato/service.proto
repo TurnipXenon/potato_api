@@ -8,6 +8,10 @@ option go_package = "rpc/potato";
 // todo documentation
 // todo refactor
 
+service Potato {
+  rpc RevalidatePath(RevalidatePathRequest) returns (RevalidatePathResponse);
+}
+
 message RevalidatePathRequest {
   string path = 1;
 }
