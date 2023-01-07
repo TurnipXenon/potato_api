@@ -13,6 +13,23 @@ export interface RevalidatePathRequest {
      */
     path: string;
 }
+/**
+ * @generated from protobuf message turnipxenon.v1.RevalidatePathResponse
+ */
+export interface RevalidatePathResponse {
+    /**
+     * @generated from protobuf field: string path = 1;
+     */
+    path: string;
+    /**
+     * @generated from protobuf field: string service_name = 2;
+     */
+    serviceName: string;
+    /**
+     * @generated from protobuf field: string message = 3;
+     */
+    message: string;
+}
 declare class RevalidatePathRequest$Type extends MessageType<RevalidatePathRequest> {
     constructor();
     create(value?: PartialMessage<RevalidatePathRequest>): RevalidatePathRequest;
@@ -23,4 +40,14 @@ declare class RevalidatePathRequest$Type extends MessageType<RevalidatePathReque
  * @generated MessageType for protobuf message turnipxenon.v1.RevalidatePathRequest
  */
 export declare const RevalidatePathRequest: RevalidatePathRequest$Type;
+declare class RevalidatePathResponse$Type extends MessageType<RevalidatePathResponse> {
+    constructor();
+    create(value?: PartialMessage<RevalidatePathResponse>): RevalidatePathResponse;
+    internalBinaryRead(reader: IBinaryReader, length: number, options: BinaryReadOptions, target?: RevalidatePathResponse): RevalidatePathResponse;
+    internalBinaryWrite(message: RevalidatePathResponse, writer: IBinaryWriter, options: BinaryWriteOptions): IBinaryWriter;
+}
+/**
+ * @generated MessageType for protobuf message turnipxenon.v1.RevalidatePathResponse
+ */
+export declare const RevalidatePathResponse: RevalidatePathResponse$Type;
 export {};
