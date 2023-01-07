@@ -29,6 +29,10 @@ export interface RevalidatePathResponse {
      * @generated from protobuf field: string message = 3;
      */
     message: string;
+    /**
+     * @generated from protobuf field: int32 error_code = 4;
+     */
+    errorCode: number;
 }
 declare class RevalidatePathRequest$Type extends MessageType<RevalidatePathRequest> {
     constructor();

@@ -59,11 +59,12 @@ class RevalidatePathResponse$Type extends runtime_5.MessageType {
         super("turnipxenon.v1.RevalidatePathResponse", [
             { no: 1, name: "path", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
             { no: 2, name: "service_name", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
-            { no: 3, name: "message", kind: "scalar", T: 9 /*ScalarType.STRING*/ }
+            { no: 3, name: "message", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
+            { no: 4, name: "error_code", kind: "scalar", T: 5 /*ScalarType.INT32*/ }
         ]);
     }
     create(value) {
-        const message = { path: "", serviceName: "", message: "" };
+        const message = { path: "", serviceName: "", message: "", errorCode: 0 };
         globalThis.Object.defineProperty(message, runtime_4.MESSAGE_TYPE, { enumerable: false, value: this });
         if (value !== undefined)
             runtime_3.reflectionMergePartial(this, message, value);
@@ -82,6 +83,9 @@ class RevalidatePathResponse$Type extends runtime_5.MessageType {
                     break;
                 case /* string message */ 3:
                     message.message = reader.string();
+                    break;
+                case /* int32 error_code */ 4:
+                    message.errorCode = reader.int32();
                     break;
                 default:
                     let u = options.readUnknownField;
@@ -104,6 +108,9 @@ class RevalidatePathResponse$Type extends runtime_5.MessageType {
         /* string message = 3; */
         if (message.message !== "")
             writer.tag(3, runtime_1.WireType.LengthDelimited).string(message.message);
+        /* int32 error_code = 4; */
+        if (message.errorCode !== 0)
+            writer.tag(4, runtime_1.WireType.Varint).int32(message.errorCode);
         let u = options.writeUnknownFields;
         if (u !== false)
             (u == true ? runtime_2.UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);

@@ -16,6 +16,7 @@ message RevalidatePathResponse {
   string path = 1;
   string service_name = 2;
   string message = 3;
+  int32 error_code = 4;
 }
 
 // endregion request and responses
