@@ -41,6 +41,10 @@ export interface RevalidatePathResponse {
      * @generated from protobuf field: string message = 3;
      */
     message: string;
+    /**
+     * @generated from protobuf field: int32 error_code = 4;
+     */
+    errorCode: number;
 }
 // @generated message type with reflection information, may provide speed optimized methods
 class RevalidatePathRequest$Type extends MessageType<RevalidatePathRequest> {
@@ -95,11 +99,12 @@ class RevalidatePathResponse$Type extends MessageType<RevalidatePathResponse> {
         super("turnipxenon.v1.RevalidatePathResponse", [
             { no: 1, name: "path", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
             { no: 2, name: "service_name", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
-            { no: 3, name: "message", kind: "scalar", T: 9 /*ScalarType.STRING*/ }
+            { no: 3, name: "message", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
+            { no: 4, name: "error_code", kind: "scalar", T: 5 /*ScalarType.INT32*/ }
         ]);
     }
     create(value?: PartialMessage<RevalidatePathResponse>): RevalidatePathResponse {
-        const message = { path: "", serviceName: "", message: "" };
+        const message = { path: "", serviceName: "", message: "", errorCode: 0 };
         globalThis.Object.defineProperty(message, MESSAGE_TYPE, { enumerable: false, value: this });
         if (value !== undefined)
             reflectionMergePartial<RevalidatePathResponse>(this, message, value);
@@ -118,6 +123,9 @@ class RevalidatePathResponse$Type extends MessageType<RevalidatePathResponse> {
                     break;
                 case /* string message */ 3:
                     message.message = reader.string();
+                    break;
+                case /* int32 error_code */ 4:
+                    message.errorCode = reader.int32();
                     break;
                 default:
                     let u = options.readUnknownField;
@@ -140,6 +148,9 @@ class RevalidatePathResponse$Type extends MessageType<RevalidatePathResponse> {
         /* string message = 3; */
         if (message.message !== "")
             writer.tag(3, WireType.LengthDelimited).string(message.message);
+        /* int32 error_code = 4; */
+        if (message.errorCode !== 0)
+            writer.tag(4, WireType.Varint).int32(message.errorCode);
         let u = options.writeUnknownFields;
         if (u !== false)
             (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
