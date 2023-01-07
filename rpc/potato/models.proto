@@ -12,4 +12,10 @@ message RevalidatePathRequest {
   string path = 1;
 }
 
+message RevalidatePathResponse {
+  string path = 1;
+  string service_name = 2;
+  string message = 3;
+}
+
 // endregion request and responses
